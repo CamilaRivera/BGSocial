@@ -1,111 +1,71 @@
-## Creating The DB
+# BG Social - LHL Final Project
 
-Use the `psql -U development` command to login to the PostgreSQL server with the username `development` and the password `development`. This command **MUST** be run in a vagrant terminal, we are using the PostgreSQL installation provided in the vagrant environment.
 
-Create a database with the command `CREATE DATABASE final_project;`.
+## BG Social
+- Summary goes here
 
-Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration. The `node-postgres` library uses these environment variables by default.
 
-```
-PGHOST=localhost
-PGUSER=development
-PGDATABASE=final_project
-PGPASSWORD=development
-PGPORT=5432
-```
+## Final Product
 
-## Seeding
+- Gifs goes here
 
-Run a the development server with `npm start` in the Host environment. We are only using vagrant for `psql` this week.
+## Features
 
-Reset the Database with `npm run db:reset`
+- Features goes here
+  
+## Technical Information / Stack
+- React Native
+- React Native Navigation
+- React Native Elements
+- Expo
+- Javascript
 
-Both of these achieve the same result.
+## Dependencies
 
-- Make a `GET` request to `/api/debug/reset` with `curl http://localhost:8001/api/debug/reset`.
-- Use the browser to navigate to `http://localhost:8001/api/debug/reset`.
+- "@expo/samples": "~3.0.3",
+- "@expo/vector-icons": "^10.0.3",
+- "@react-navigation/web": "^1.0.0-alpha.9",
+- "axios": "^0.19.0",
+- "expo": "^35.0.0",
+- "expo-asset": "^7.0.0",
+- "expo-constants": "^7.0.0",
+- "expo-facebook": "~7.0.0",
+- "expo-font": "^7.0.0",
+- "expo-web-browser": "^7.0.0",
+- "moment": "^2.24.0",
+- "react": "16.8.3",
+- "react-dom": "16.8.3",
+- "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+- "react-native-chart-kit": "^3.10.0",
+- "react-native-elements": "^1.2.6",
+- "react-native-gesture-handler": "~1.3.0",
+- "react-native-maps": "~0.25.0",
+- "react-native-modal-datetime-picker": "^7.6.0",
+- "react-native-selectmultiple-button": "^0.1.105",
+- "react-native-svg": "^9.13.2",
+- "react-native-svg-charts": "^5.3.0",
+- "react-native-web": "^0.11.7",
+- "react-navigation": "^3.12.0",
+- "react-navigation-hooks": "^1.1.0"
 
-The `development` data is random. Each time we seed we expect to see different appointments.
+## Dev Dependencies
 
-## Api
+- "@babel/core": "^7.6.4",
+- "@storybook/addon-actions": "^5.2.5",
+- "@storybook/addon-links": "^5.2.5",
+- "@storybook/addons": "^5.2.5",
+- "@storybook/react-native": "^5.2.5",
+- "@storybook/react-native-server": "^5.2.5",
+- "babel-loader": "^8.0.6",
+- "babel-preset-expo": "^7.0.0",
+- "jest-expo": "^35.0.0"
 
-### Days
+## Getting Started
 
-`GET /api/days`
+* Getting started goes here
 
-Response
+## Project Team
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Monday",
-    "appointments": [1, 2],
-    "interviewers": [1, 2],
-    "spots": 0
-  }
-]
-```
-
-### Appointments
-
-`GET /api/appointments`
-
-Response:
-
-```json
-{
-  "1": {
-    "id": 1,
-    "time": "12pm",
-    "interview": {
-      "student": "Lydia Miller-Jones",
-      "interviewer": 1
-    }
-  },
-  "2": {
-    "id": 2,
-    "time": "1pm",
-    "interview": {
-      "student": "Archie Cohen",
-      "interviewer": 2
-    }
-  }
-}
-```
-
-`PUT /api/appointments/:id`
-
-Body:
-
-```json
-{
-  "interview": {
-    "student": String,
-    "interviewer": Number
-  }
-}
-```
-
-`DELETE /api/appointments/:id`
-
-### Interviewers
-
-`GET /api/interviewers`
-
-Response:
-
-```json
-{
-  "1": {
-    "id": 1,
-    "name": "Sylvia Palmer",
-    "avatar": "https://i.imgur.com/LpaY82x.png"
-  },
-  "2": {
-    "id": 2,
-    "name": "Tori Malcolm",
-    "avatar": "https://i.imgur.com/Nmx0Qxo.png"
-  }
-}
-```
+- [Camila Rivera](https://github.com/CamilaRivera)
+- [Zongxi Li](https://github.com/zongxili)
+- [Max Wong](https://github.com/MaxWong03)
